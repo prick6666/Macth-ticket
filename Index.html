@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Match Ticket</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f2f5fa;color:#15213b}
+header{background:#101d38;color:white;padding:22px 18px}
+header h1{margin:0;font-size:25px;letter-spacing:1px}
+header p{color:#c8d3e8;font-size:13px;margin-bottom:0}
+main{max-width:540px;margin:35px auto;padding:16px}
+.card{background:white;padding:24px;border-radius:16px;box-shadow:0 8px 30px #15213b12}
+h2{margin-top:0;font-size:23px}
+p{line-height:1.6;color:#526078}
+label{display:block;font-weight:bold;margin:18px 0 8px}
+input,button{width:100%;padding:14px;border-radius:9px;font-size:16px}
+input{border:1px solid #cbd3e1}
+button{margin-top:18px;background:#173b79;color:white;border:0;font-weight:bold}
+button:disabled{opacity:.6}
+.notice{background:#edf4ff;padding:12px;border-radius:8px;font-size:13px}
+footer{text-align:center;color:#78849a;font-size:12px;padding:24px}
+</style>
+</head>
+<body>
+<header>
+<h1>🎟 MATCH TICKET</h1>
+<p>Football ticket notifications</p>
+</header>
+<main>
+<section class="card">
+<h2>Ticket notification center</h2>
+<p>Send a ticket-status notification to a recipient using Match Ticket.</p>
+<div class="notice">Notifications identify Match Ticket as the sender. Only send accurate information about a ticket's actual status.</div>
+<form id="notifyForm">
+<label for="email">Recipient email address</label>
+<input id="email" type="email" placeholder="name@example.com" required>
+<label for="reference">Ticket reference (optional)</label>
+<input id="reference" type="text" placeholder="Enter a genuine reference">
+<button type="submit">Continue</button>
+<p id="result" role="status"></p>
+</form>
+</section>
+</main>
+<footer>Match Ticket · Ticket notification service</footer>
+<script>
+document.getElementById("notifyForm").addEventListener("submit",function(e){
+e.preventDefault();
+document.getElementById("result").textContent =
+"Your details are ready. Email delivery must be connected before a notification can be sent.";
+});
+</script>
+</body>
+</html>
